@@ -12,7 +12,7 @@ const Reminder = ({ text, reminder, reminders, setReminders }) => {
          if(item.id === reminder.id) {
              return{
              ...item, completed: !item.completed
-         }
+         };
         }
         return item;
      }))
@@ -20,9 +20,15 @@ const Reminder = ({ text, reminder, reminders, setReminders }) => {
 
     return(
         <div className="reminder" >
-            <li className={`reminder-item ${reminder.completed ? "completed" : "" }`} >{text}</li>
-            <button onClick={completHander} className="complete-button" > <i  className="fas fa-check"  ></i> </button>
-            <button onClick={deleteHandler} className="trash-button"> <i className="fas fa-trash" ></i></button>
+            <li className={`reminder-item ${reminder.completed ? "completed" : "" }`} >
+                {text}
+            </li>
+            <button onClick={completHander} className="complete-button" > 
+                <i  className="fas fa-check"  ></i> 
+            </button>
+            <button onClick={deleteHandler} className="trash-button">
+                <i className="fas fa-trash" ></i>
+            </button>
         </div>
 
     );

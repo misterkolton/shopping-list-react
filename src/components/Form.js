@@ -9,8 +9,7 @@ import React from 'react';
     //     props.setInputText
     // }
 const Form = ({ setInputText, reminders, setReminders, inputText, setStatus }) => {
-    const inputTextHandler = (e) => {
-        console.log(e.target.value);
+    const inputTextHandler = (e) => {       
         setInputText(e.target.value);
     };
     const submitReminderHandler = (e) => {
@@ -33,7 +32,7 @@ const Form = ({ setInputText, reminders, setReminders, inputText, setStatus }) =
             <i className="fas fa-plus"></i>
             </button>
             <div className="select">
-                <select onChange={statusHandler} name="reminders" className="filter'reminder">
+                <select onChange={statusHandler} name="reminders" className="filter-reminder">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
